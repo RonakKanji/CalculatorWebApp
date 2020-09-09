@@ -1,6 +1,14 @@
 import React from "react";
+import Slider from "@material-ui/core/Slider";
+import Marks from "./HomeLoanRange";
+import InterestRange from "./InterestRateRange";
 
 function HomeLoan() {
+  const customStyle = {
+    color: "orange",
+    width: "500px"
+  };
+
   const [homeLoanAmount, setHomeLoanAmount] = React.useState(0);
   const [interestRate, setInterestRate] = React.useState(0);
 
@@ -11,26 +19,52 @@ function HomeLoan() {
   function handleInterestRate(event) {
     setInterestRate(event.target.value);
   }
+  function handleHomeLoanSlider(event, value) {
+    setHomeLoanAmount(value);
+  }
+
+  function handleInterestRateSlider(event, value) {
+    setInterestRate(value);
+  }
 
   return (
     <div className="App">
       <div className="frame">
-        <h2>Home Loan Amount</h2>
-        <input type="text" onChange={handleHomeLoan} placeholder={homeLoanAmount}/>
-        <input step="5000000" min="0" max="20000000" type="range" value={homeLoanAmount} onChange={handleHomeLoan} />
+        <h2 className="setColor">Home Loan Amount</h2>
+        <input
+          type="text"
+          onChange={handleHomeLoan}
+          placeholder={homeLoanAmount}
+        />
+        <Slider
+          style={customStyle}
+          onChange={handleHomeLoanSlider}
+          min={0}
+          max={20000000}
+          defaultValue={0}
+          value={homeLoanAmount}
+          aria-labelledby="discrete-slider-custom"
+          marks={Marks.map((ele) => ele)}
+        />
         <button type="button" className="btn btn-secondary btn-outline-light">
           $
         </button>
         <h2>Interest Rate</h2>
-        <input type="text" onChange={handleInterestRate}
-          placeholder={interestRate}/>
         <input
-          step="2.5"
-          min="2.5"
-          max="20"
-          type="range"
-          value={interestRate}
+          type="text"
           onChange={handleInterestRate}
+          placeholder={interestRate}
+        />
+        <Slider
+          style={customStyle}
+          onChange={handleInterestRateSlider}
+          min={0}
+          max={20}
+          step={2.5}
+          defaultValue={0}
+          value={interestRate}
+          aria-labelledby="discrete-slider-custom"
+          marks={InterestRange.map((ele) => ele)}
         />
         <button type="button" className="btn btn-secondary btn-outline-light">
           %
