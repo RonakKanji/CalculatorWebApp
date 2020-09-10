@@ -1,7 +1,7 @@
 const marks = [
   {
     value: 0,
-    label: '0',
+    label: '0°C',
   },
   {
     value: 5000000,
