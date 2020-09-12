@@ -196,9 +196,6 @@ function HomeLoan() {
               valueLabelDisplay="on"
             />
           </div>
-          <button className="btn btn-secondary btn-outline-light submit">
-            calculate
-          </button>
         </div>
       </div>
       <div>
