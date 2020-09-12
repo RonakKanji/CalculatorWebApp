@@ -11,6 +11,7 @@ import styles2 from "./mystyles2.module.css";
 var truth = true;
 var num = 12;
 
+
 function HomeLoan() {
   const customStyle = {
     color: "orange",
@@ -57,19 +58,16 @@ function HomeLoan() {
     setTenure(event.target.value);
   }
 
-  
-
-
   function handleClick(event) {
     if (event.target.value === "Mo") {
       truth = true;
       num = 1;
-        setCustomTenure((prevValue) => {
+      setCustomTenure((prevValue) => {
         return { ...prevValue, max: 12 };
       });
     } else if (event.target.value === "Yr") {
-      num =12;
-     truth = false;
+      num = 12;
+      truth = false;
       setCustomTenure((prevValue) => {
         return { ...prevValue, max: 30 };
       });
@@ -165,7 +163,7 @@ function HomeLoan() {
               onChange={handleInterestRateSlider}
               min={0}
               max={20}
-              step={0.25}
+              step={2.5}
               defaultValue={0}
               value={interestRate}
               aria-labelledby="discrete-slider-custom"
@@ -199,17 +197,24 @@ function HomeLoan() {
               valueLabelDisplay="on"
             />
           </div>
+          <button className="btn btn-secondary btn-outline-light submit">
+            calculate
+          </button>
         </div>
       </div>
       <div>
-      <CalculateRates
-        emi={interestRate * 0.01 * homeLoanAmount}
-        totalEMI={interestRate * 0.01 * homeLoanAmount * tenure * num}
-        payment={homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num}
-        homeLoanAmount={homeLoanAmount}
-        payments={homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num}
-        t={t}
-      />
+        <CalculateRates
+          emi={interestRate * 0.01 * homeLoanAmount}
+          totalEMI={interestRate * 0.01 * homeLoanAmount * tenure * num}
+          payment={
+            homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num
+          }
+          homeLoanAmount={homeLoanAmount}
+          payments={
+            homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num
+          }
+          t={t}
+        />
       </div>
     </div>
   );

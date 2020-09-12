@@ -40,11 +40,21 @@
 
 .divcolor {
   background-color: #e1e0d6;
-  margin: 20px;
+  margin: 0 20px;
   padding: 20px 3px;
   border-radius: 5px;
 }
 
 .actualpie {
   align-self: center;
+  width: 50%;
+}
+
+.piee{
+  position: relative;
+  height: 400px;
+}
+.actualpiee{
+  height: 300px;
+  width: 70%;
 }
