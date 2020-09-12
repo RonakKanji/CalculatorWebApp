@@ -1,9 +1,9 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
 
-function PieChart({ principalAmount, totalInterest }) {
+function PieChart({ principalAmount, totalInterest, t }) {
   var state = {
-    labels: ["Principal Loan Amount", "Total interest"],
+    labels: [t("HomeLoan.5"), t("InterestRate.3")],
     datasets: [
       {
         data: [principalAmount, totalInterest],
@@ -14,7 +14,7 @@ function PieChart({ principalAmount, totalInterest }) {
 
   return (
     <div>
-      <h3>Break-up of total payment</h3>
+      <h3>{t("HomeLoan.4")}</h3>
       <Pie
         data={{
           labels: state.labels,

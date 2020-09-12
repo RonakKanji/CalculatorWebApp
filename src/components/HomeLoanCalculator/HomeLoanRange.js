@@ -1,25 +1,24 @@
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: "0"
   },
   {
     value: 5000000,
-    label: '50L',
+    label: "50L"
   },
   {
     value: 10000000,
-    label: '100L',
+    label: "100L"
   },
   {
     value: 15000000,
-    label: '150L',
+    label: "150L"
   },
   {
     value: 20000000,
-    label: '200L',
-  },
+    label: "200L"
+  }
 ];
 
-  export default marks;
-  
+export default marks;
