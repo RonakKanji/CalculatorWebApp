@@ -16,6 +16,7 @@ function CalculateRates(props) {
             thousandsGroupStyle="lakh"
             prefix={props.t("Currency.1")}
             value={props.emi}
+            decimalScale="3"
           />
         </div>
         <hr className={styles.pok} />
@@ -28,6 +29,7 @@ function CalculateRates(props) {
             thousandsGroupStyle="lakh"
             prefix={props.t("Currency.1")}
             value={props.totalEMI}
+            decimalScale="3"
           />
         </div>
         <hr className={styles.pok} />
@@ -40,6 +42,7 @@ function CalculateRates(props) {
             thousandsGroupStyle="lakh"
             prefix={props.t("Currency.1")}
             value={props.payment}
+            decimalScale="3"
           />
         </div>
       </div>
