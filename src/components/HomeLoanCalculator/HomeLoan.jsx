@@ -11,7 +11,6 @@ import styles2 from "./mystyles2.module.css";
 var truth = true;
 var num = 12;
 
-
 function HomeLoan() {
   const customStyle = {
     color: "orange",
@@ -175,7 +174,7 @@ function HomeLoan() {
           <input
             className={styles2.inputsss3}
             onChange={handletenure}
-            type="number"
+            type="text"
             placeholder="Enter Tenure"
             value={tenure}
           />
