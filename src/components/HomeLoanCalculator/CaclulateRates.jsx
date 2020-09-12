@@ -50,7 +50,7 @@ function CalculateRates(props) {
         <PieChart
           className={styles.actualpie}
           principalAmount={props.homeLoanAmount}
-          totalInterest={props.payments}
+          totalInterest={props.payment}
           t={props.t}
         />
       </div>

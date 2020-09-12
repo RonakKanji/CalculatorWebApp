@@ -162,7 +162,7 @@ function HomeLoan() {
               onChange={handleInterestRateSlider}
               min={0}
               max={20}
-              step={2.5}
+              step={0.25}
               defaultValue={0}
               value={interestRate}
               aria-labelledby="discrete-slider-custom"
@@ -206,9 +206,6 @@ function HomeLoan() {
             homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num
           }
           homeLoanAmount={homeLoanAmount}
-          payments={
-            homeLoanAmount + interestRate * 0.01 * homeLoanAmount * tenure * num
-          }
           t={t}
         />
       </div>
