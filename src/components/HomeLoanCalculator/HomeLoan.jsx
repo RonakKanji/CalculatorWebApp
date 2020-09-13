@@ -139,6 +139,7 @@ function HomeLoan() {
                 min={0}
                 max={20000000}
                 defaultValue={0}
+                step="100000"
                 value={homeLoanAmount}
                 aria-labelledby="discrete-slider-custom"
                 marks={Marks.map((ele) => ele)}

@@ -1,5 +1,4 @@
-const values = [
-  {
+const values = [{
     value: 0,
     label: "0"
   },
